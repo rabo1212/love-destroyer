@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MBTI별 연애 파괴자 테스트! 나는 어떻게 연애를 망치는가? 10개 질문으로 알아보자!">
+    <meta name="keywords" content="MBTI, 연애테스트, 심리테스트, 연애파괴자, 연애유형, 연애스타일">
+    <meta name="author" content="연애파괴자테스트">
+    <meta property="og:title" content="MBTI별 연애 파괴자 테스트 💔">
+    <meta property="og:description" content="나는 어떻게 연애를 망치는가? 10개 질문으로 알아보자!">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>MBTI별 연애 파괴자 테스트 💔 | 나는 어떻게 연애를 망치는가?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Jua&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3J06LDSMBM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3J06LDSMBM');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6584899015936237" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">💔 연애파괴자</a>
+            <div class="nav-links">
+                <a href="about.html">소개</a>
+                <a href="privacy.html">개인정보처리방침</a>
+                <a href="terms.html">이용약관</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="ad-container">광고 영역</div>
+
+    <div class="bg-deco">
+        <div class="heart">💔</div>
+        <div class="heart">💕</div>
+        <div class="heart">💘</div>
+        <div class="heart">😈</div>
+        <div class="sparkle">✦</div>
+        <div class="sparkle">✦</div>
+        <div class="sparkle">✦</div>
+    </div>
+
+    <div class="container">
+        <div id="start-screen" class="screen active">
+            <div class="start-card">
+                <div class="title-badge">LOVE TEST</div>
+                <div class="title-emoji">💔</div>
+                <h1 class="title">MBTI별<br>연애 파괴자</h1>
+                <p class="subtitle">나는 어떻게<br>연애를 망치는가? 😈</p>
+                <button class="start-btn" onclick="startTest()">테스트 시작 →</button>
+            </div>
+            <div class="intro-section">
+                <h2>💘 이 테스트는?</h2>
+                <p>연애할 때 나도 모르게 저지르는 실수들! MBTI 기반으로 당신의 연애 파괴 유형을 알아봐요. (재미로만 봐주세요!)</p>
+                <h2>💔 16가지 파괴자 유형</h2>
+                <p>과몰입형, 냉동인간형, 집착형, 도망형... 당신은 어떤 유형?</p>
+                <h2>⏱️ 소요시간</h2>
+                <p>약 3분 (10개 질문)</p>
+            </div>
+        </div>
+
+        <div id="question-screen" class="screen">
+            <div class="question-card">
+                <div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
+                <div class="question-number" id="q-number">Q1 / 10</div>
+                <div class="question-text" id="q-text"></div>
+                <div class="options" id="options"></div>
+            </div>
+        </div>
+
+        <div id="result-screen" class="screen">
+            <div class="result-card">
+                <div class="result-badge" id="result-mbti">ENFP</div>
+                <div class="result-emoji" id="result-emoji">🦋</div>
+                <div class="result-type" id="result-type">관심 분산형 파괴자</div>
+                <div class="result-tagline" id="result-tagline">"새로운 사람 너무 재밌어 보여..."</div>
+                <div class="result-desc" id="result-desc"></div>
+                <div class="result-trigger">
+                    <div class="trigger-title">💔 파괴 포인트</div>
+                    <div class="trigger-text" id="result-trigger"></div>
+                </div>
+                <div class="result-tip">
+                    <div class="tip-title">💕 연애 생존 팁</div>
+                    <div class="tip-text" id="result-tip"></div>
+                </div>
+                <div class="share-section">
+                    <div class="share-title">친구한테 공유하기</div>
+                    <div class="share-buttons">
+                        <button class="share-btn kakao" onclick="shareKakao()">카카오톡</button>
+                        <button class="share-btn twitter" onclick="shareTwitter()">트위터</button>
+                        <button class="share-btn copy" onclick="copyLink()">링크복사</button>
+                    </div>
+                </div>
+                <button class="retry-btn" onclick="restartTest()">다시 테스트하기 🔄</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="ad-container">광고 영역</div>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-section">
+                    <h3>💔 연애파괴자테스트</h3>
+                    <p>나는 어떻게 연애를 망치는가?<br>재미로 알아보는 테스트!</p>
+                </div>
+                <div class="footer-section">
+                    <h3>안내</h3>
+                    <p>본 테스트는 재미 목적으로 제작되었습니다. 실제 MBTI 검사와 무관합니다.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>문의</h3>
+                    <a href="mailto:rnu301@gmail.com">rnu301@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 연애파괴자테스트. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">개인정보처리방침</a>
+                    <a href="terms.html">이용약관</a>
+                    <a href="about.html">서비스 소개</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+    <script src="script.js"></script>
+</body>
+</html>
